@@ -1,0 +1,23 @@
+[project]
+name = "crewai_multiagent_blogpost"
+version = "0.1.0"
+description = "crewai_multiagent_blogpost using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.98.0,<1.0.0"
+]
+
+[project.scripts]
+crewai_multiagent_blogpost = "crewai_multiagent_blogpost.main:run"
+run_crew = "crewai_multiagent_blogpost.main:run"
+train = "crewai_multiagent_blogpost.main:train"
+replay = "crewai_multiagent_blogpost.main:replay"
+test = "crewai_multiagent_blogpost.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
